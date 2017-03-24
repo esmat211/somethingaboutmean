@@ -1,5 +1,5 @@
-var Users = require(__dirname + '/../controllers/Users');
-var Surveys = require(__dirname + '/../controllers/Surveys');
+var Users = require(__dirname + '/../controllers/users');
+var Surveys = require(__dirname + '/../controllers/surveys');
 
 
 module.exports = function(app){
