@@ -1,0 +1,26 @@
+<div ng-controller = "SurveyController">
+	<a href="#/login"><h1>Logout<h1></a><br>
+	<a href="#/create"><h1>Create a New Poll</h1></a><br>
+	<hr>
+	<h3>Current Polls:</h3>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Question for:</th>
+					<th>Date Posted</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="survey in surveys">
+					<td>{{survey._user.name}}</td>
+					<td><a href="#/poll/{{survey._id}}">{{survey.question}}</a></td>
+					<td>{{survey.createdAt}}</td>
+					<td><button ng-show="loggedInUser._id == survey._user._id" ng-click="delete(survey._id)">Delete</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

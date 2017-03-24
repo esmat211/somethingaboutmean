@@ -1,0 +1,12 @@
+<div ng-controller="SurveyController">
+	<a href="#/dashboard"><h1>Back to main page</h1></a>
+	<h3>Add a title for question</h3>
+	<h4>the title must me at least 8 character</h4>
+	<p>Question: <input type="text" ng-model="survey.question"></p>
+	<h3>Answer each option with at least 4 character</h3>
+	<p>Option1: <input type="text" ng-model="survey.option1.value"></p>
+	<p>Option2: <input type="text" ng-model="survey.option2.value"></p>
+	<p>Option3: <input type="text" ng-model="survey.option3.value"></p>
+	<p>Option4: <input type="text" ng-model="survey.option4.value"></p>
+	<button ng-click="create()">Create Poll</button>
+</div>
